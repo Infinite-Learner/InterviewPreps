@@ -2,7 +2,28 @@ package Binary_Search;
 
 public class Koko_Eating_Banana {
     public static int minEatingSpeed(int[] piles, int h) {
-        // 
+        //  if(piles.length > h) return 0;
+        // int left = 1;
+        // int right= -1;
+        // for(int pile : piles) {
+        //     right = Math.max(right, pile);      
+        // }
+        // int optimal_speed = 0;
+        // while(left <= right) {
+        //     int mid = left + (right - left) / 2;
+        //     int eatingTime = 0;
+        //     for(int i=0; i < piles.length; i++) {
+        //         eatingTime += Math.ceil((double)piles[i] / mid);
+        //     }
+        //     if(eatingTime > h) {
+        //         left = mid + 1;
+        //     }
+        //     else {
+        //         optimal_speed = mid;
+        //         right = mid - 1;
+        //     }
+        // }
+        // return optimal_speed; // 27ms
         int n = piles.length;
         long total = 0;
         for (int p : piles) total += p;
@@ -23,7 +44,7 @@ public class Koko_Eating_Banana {
             }
         }
         
-        return left;
+        return left; //0ms
     }
     public static void main(String[] args) {
         int[][]test_cases = {{3,6,7,11},{30,11,23,4,20},{8,10,12}};

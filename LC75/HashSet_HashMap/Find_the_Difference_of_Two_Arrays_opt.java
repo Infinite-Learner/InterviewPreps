@@ -1,4 +1,5 @@
 package HashSet_HashMap;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +52,8 @@ public class Find_the_Difference_of_Two_Arrays_opt
 }
     public static void main(String[] args) {
         int[][] test_cases = {{1,2,3},{2,4,6},{1,2,3,3},{1,1,2,2,2,3},{1,2,3,3,4,5,6,7,7},{1,2,3,4,5,6,7,8,9}};
-        for(int i=0;i<=test_cases.length/2+1;i+=2){
+        for(int i=0;i<=test_cases.length/2+1;i+=2){ 
+            // optimized
             System.out.println(findDifference(test_cases[i],test_cases[i+1]));
         }
     }
